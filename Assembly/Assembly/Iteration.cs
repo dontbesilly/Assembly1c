@@ -378,11 +378,11 @@ namespace Assembly
             string rar = @"C:\Program Files\WinRAR\WinRAR.exe";
 
             string nameRar = $"{atributes.RootFolder}\\{atributes.Pattern.ResultFull}{atributes.Prefix}{atributes.Release}";
-            string arguments = $"a -ed -ep1 -r {nameRar}.rar {nameRar}";
+            string arguments = $"a -afzip -ed -ep1 -r {nameRar}.zip {nameRar}";
             Operation.StartProcess(arguments, rar);
 
             nameRar = $"{atributes.RootFolder}\\{atributes.Pattern.ResultUpdate}{atributes.Prefix}{atributes.Release}";
-            arguments = $"a -ed -ep1 -r {nameRar}.rar {nameRar}";
+            arguments = $"a -afzip -ed -ep1 -r {nameRar}.zip {nameRar}";
             Operation.StartProcess(arguments, rar);
         }
 
